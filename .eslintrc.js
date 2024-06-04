@@ -8,6 +8,7 @@ module.exports = {
       jsx: true,
     },
     ecmaVersion: 6,
+    project: './tsconfig.json',
     sourceType: 'module',
   },
   ignorePatterns: ['generated.ts', 'next.config.js'],
@@ -117,6 +118,13 @@ module.exports = {
     '@typescript-eslint/ban-types': 'off',
     'no-use-before-define': ['error', { functions: false }],
     'default-case': 'off',
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: ['arrow-function', 'function-declaration'],
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
   settings: {
     'import/resolver': {
